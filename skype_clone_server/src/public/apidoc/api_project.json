@@ -1,0 +1,15 @@
+{
+  "name": "Skype_clone V0.0.1",
+  "version": "0.0.1",
+  "description": "Skype_Clone Social Media API Document",
+  "title": "Skype_Clone Social Media API Document",
+  "sampleUrl": false,
+  "defaultVersion": "0.0.0",
+  "apidoc": "0.3.0",
+  "generator": {
+    "name": "apidoc",
+    "time": "2022-05-07T09:28:54.285Z",
+    "url": "http://apidocjs.com",
+    "version": "0.17.7"
+  }
+}

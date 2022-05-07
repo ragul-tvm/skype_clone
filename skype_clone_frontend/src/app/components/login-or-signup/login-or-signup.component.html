@@ -1,0 +1,42 @@
+<div class="loginSection">
+    <div class="text-center">
+        <img class="logo" src="../../../assets/logo.jpg" alt="" width="40px">
+    </div>
+    <div class="login-main">
+        <h1 class="title">Skype <i class="fa-light fa-copy"></i></h1>
+        <div class="loginGetMail">
+            <div *ngIf="user === undefined || ( errorNote) else getPassword">
+                <h2 class="mb-0">Sign in</h2>
+                <p class="noteTo">to continue to Skype</p>
+                <p class="errorNote" *ngIf="errorNote">That Microsoft account doesn't exist. Enter a different account or <a
+                        href="#">get a new one</a>.</p>
+                <input class="" type="text" name="username" id="username" placeholder="Email, phone, or Skype" autofocus
+                    autocomplete="username" required [(ngModel)]="username">
+                <p class="my-3">No account? <a href="#">Create one!</a></p>
+                <p><a href="#">Sign in with security key</a>&nbsp;<i class="fa-regular fa-circle-question"></i></p>
+                <div class="nextBtn"><button (click)="getUserforLogin(username)">Next</button></div>
+            </div>
+            <ng-template #getPassword>
+                <div class="loginGetPassword">
+                    <p (click)="backtoSignin()"><i class="fa-light fa-arrow-left-long"></i>&nbsp;&nbsp;{{user.emailId}}</p>
+                    <h2 class="mb-0">Enter Password</h2>
+                    <p class="errorNote" *ngIf="errorMsg !== '' ">Your account or password is incorrect. If you don't remember your
+                        password
+                        <a href="#">reset it now</a>.
+                    </p>
+                    <input class="" type="password" name="password" id="password" placeholder="Password" autofocus
+                        autocomplete="password" required [(ngModel)]="password">
+                    <p class="my-3"><a href="#">Forget Password?</a></p>
+                    <p><a href="#">Email code to {{user.emailId}}</a></p>
+                    <div class="nextBtn"><button (click)="validatePassword(password)" >Sign in</button></div>
+                </div>
+            </ng-template>
+        </div>
+    </div>
+    <div class="login-option" *ngIf="user === undefined || errorNote">
+        <h5><i class="fa-light fa-key fa-flip-horizontal"></i> Sign in options</h5>
+    </div>
+    <!-- <pre>{{user | json}}</pre> -->
+    
+</div>
+<app-bottom-app-bar></app-bottom-app-bar>

@@ -1,0 +1,108 @@
+.loginSection{
+    width: 440px;
+    background-color: transparent;
+    margin: 0 auto;
+    margin-top: 70px;
+    font-family: 'Times New Roman', Times, serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: stretch;
+}
+
+.loginSection .logo {
+    border-radius: 50%;
+}
+
+
+.login-main{
+    margin-top: 20px;
+    width: 100%;
+    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.2);
+    padding: 10%;
+}
+
+.title{
+    margin: 0;
+    color: #14004b;
+    font-family: 'Roboto', sans-serif;
+
+}
+input[type="text"], input[type="password"]{
+    margin-top: 10px;
+    width: 100%;
+    background-color: transparent;
+    font-family: 'Times New Roman', Times, serif;
+    outline: none;
+    border: none;
+    padding-bottom: 0.2em;
+    border-bottom: 1px solid #14004b;
+    font-size: 1rem;
+}
+h2{
+    font-weight: bold;
+    margin: 0;
+}
+.noteTo {
+    margin-top: 0;
+}
+.errorNote {
+    margin-top: 10px;
+    color: red;
+    font-size: 0.9rem;
+    margin-bottom: 0;
+    margin-block: 0;
+}
+.loginSection a{
+    text-decoration: none;
+    color: #14004b;
+}
+.loginSection a:hover{
+    color: grey;
+    text-decoration: underline;
+}
+p{
+    font-size: small;
+}
+.nextBtn{
+    width: 100%;
+    display: flex;
+    flex-direction: row-reverse;
+    margin: 30px 0 0px 0;
+}
+.nextBtn > button {
+    background-color: #14004b;
+    padding: 0.6em 2.6em;
+    outline: none;
+    border: none;
+    color: #f0fffe;
+    cursor: pointer;
+}
+.login-option{
+    width: 100%;
+    margin-top: 4%;
+    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.2);
+    padding: 04% 10%;
+    font-weight: 400;
+    cursor: pointer;
+}
+
+.login-option h5 {
+    margin: 0;
+}
+
+.mb-0{
+    margin-top: 10px;
+}
+
+app-bottom-app-bar{
+    position: fixed;
+    bottom: 0%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+    color: #14004b;
+    background-color: #707070;
+}

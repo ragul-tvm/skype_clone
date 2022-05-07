@@ -1,0 +1,366 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    
+}
+
+.dflex-col {
+    display: flex;
+    flex-direction: column;
+}
+.dflex-row {
+    display: flex;
+    flex-direction: row;
+}
+.mainProfile {
+    max-width: 100vw;
+    max-height: 100vh;
+    width: 100vw;
+    font-family: SF Regular,Segoe UI Regular,sans-serif;
+}
+
+.chatProfilePanel {
+    width: 25%;
+    background-color: rgb(20, 20, 20);
+    height: 100vh;
+    padding: 0.5em;
+}
+.profileContainer {
+    width: 100%;
+    padding: 0.4em;
+    align-items: center;
+    justify-content: space-between;
+    color: #969696;
+
+}
+.profileContainer .personalProfilePhoto{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    overflow: hidden;
+    align-self: center;
+    cursor: pointer;
+}
+
+.personalProfileNameAndStatus {
+    width: 70%;
+    height: 100%;
+    text-align: left;
+    align-items: flex-start;
+    justify-items: flex-start;
+    justify-content: space-between;
+    cursor: pointer;
+}
+.personalProfileNameWithCost {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    gap: 10%;
+}
+.personalProfileName{
+    font-size: 1.2em;
+    font-weight: bolder;
+    color: beige;
+    font-family: SF Regular,Segoe UI Regular,sans-serif;
+
+}
+
+.personalProfileStatus{
+    font-weight: lighter;
+    font-size: 0.7em;
+}
+
+.searchControlPanel{
+    display: flex;
+    flex-direction: column;
+    padding: 0.4em;
+    color: #969696;
+    /* background-color: darkkhaki; */
+}
+
+.searchInputSection {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 3%;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.searchInputToggler{
+    font-size: 0.8em;
+    color: #969696;
+    background-color: rgb(30, 31, 37);
+    padding: 0.5em;
+    border-radius: 8px;
+    flex: 1;
+}
+
+.searchInputDialer{
+    border-radius: 8px;
+    padding: 0.3em;
+    background-color: rgb(30, 31, 37);
+    line-height: 0.4;
+    font-size: 0.9em;
+    color: #969696;
+}
+.searchIconSection{
+    justify-content: space-between;
+    /* gap: 3%; */
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.icon {
+    align-items: center;
+}
+.icon .active {
+    color: rgb(68, 68, 204);
+}
+
+.icon:hover{
+    color: rgb(68, 68, 204);
+}
+
+.icon > span {
+    margin-top: 0.2em;
+    font-size: 0.6em;
+}
+
+.searchAdvancePanel{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 3%;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.searchAdvancePanel > div {
+    background-color: rgb(30, 31, 37);
+    padding: 6px;
+    font-size: 0.8em;
+    border: solid 1px #9696968e;
+    flex: 1;
+    text-align: center;
+    border-radius: 50px;
+    color: beige;
+}
+
+.chatListPanel {
+    /* padding: 0.4em; */
+    color: #969696;
+    margin-bottom: 10px;
+    overflow-y: scroll;
+}
+.chatListPanel:hover::-webkit-scrollbar-thumb {
+    background-color: #969696;
+}
+
+.chatListPanel::-webkit-scrollbar-track {
+    background-color: transparent;
+    border-radius: 50px;
+}
+.chatListPanel::-webkit-scrollbar-thumb{
+    background-color: transparent;
+    border-radius: 50px;
+}
+.chatListPanel::-webkit-scrollbar {
+    width: 7px;
+}
+
+.chatsListControlPanel > ul > li {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    padding: 0.4em;
+    align-items: center;
+    justify-content: space-between;
+    color: #969696;
+    border-radius: 10px;
+}
+.chatsListControlPanel > ul > li:hover {
+    background-color: #96969605;
+    cursor: pointer;
+}
+
+.chatListPanelTitle {
+    color: #969696;
+}
+.userProfileImage {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    overflow: hidden;
+    align-self: center;
+    background-image: linear-gradient(to bottom right, rgba(107, 120, 138, 0.445), rgba(0, 43, 107, 0.315) 90%);
+}
+
+.userProfileNameandLastChat {
+    flex: 1;
+    justify-content: space-between;
+    overflow: hidden;
+}
+.userProfileNamewithEmoji {
+    align-items: center;
+    width: 100%;
+    gap: 10%;
+}
+.userProfileName{
+    font-size: 1.2em;
+    font-weight: bolder;
+    color: beige;
+}
+
+.userLastChat{
+    font-weight: lighter;
+    font-size: 0.8em;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+.userLastchatTime{
+    align-self: baseline;
+    font-weight: lighter;
+    font-size: 0.7em;
+}
+
+.chatControlPanel {
+    width: 75%;
+    height: 100vh;
+    background-color: rgba(25, 24, 27, 1);
+}
+
+.welcomeScreen {
+    width: 100%;
+    max-width: 80%;
+    height: 100vh;
+    margin: 0 auto;
+    overflow: hidden;
+    padding: 5%;
+    color: beige;
+}
+
+.WelcomeNotewithProfilePicture{
+    align-items: center;
+    justify-content: space-between;
+}
+
+.WelcomeNotewithProfilePicture > img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+.welcomeNoteWithName {
+    margin-left: 15px;
+    flex: 1;
+    line-height: 1.5;
+    font-size: 2em;
+
+}
+
+.welcomeNote {
+    font-weight: lighter;
+}
+.profileNameOnWelcomeNote{
+    font-weight: 800;
+    font-family: 'Roboto', sans-serif;
+    /* letter-spacing: 0.2em; */
+}
+
+.shareProfile{
+    display: flex;
+    height: 100%;
+    align-items: flex-end;
+    text-align: end;
+}
+.shareProfile > span {
+    border: 1px solid beige;
+    border-radius: 100px;
+    padding: 5px 10px;
+    font-size: 0.8em;
+}
+
+.actionCardOnWelcomeScreen{
+    margin-top: 5vh;
+    margin-bottom: 3vh;
+}
+
+.actionCardTitleNote {
+    font-size: 1.2em;
+    margin-bottom: 1em;
+
+}
+.actionCardContainer{
+    width: 100%;
+    justify-content: space-between;
+    gap: 2%;
+}
+.actionCard{
+    border: 1px solid rgba(150, 150, 150, 0.247);
+    padding: 1em;
+    border-radius: 10px;
+    align-items: center;
+    flex: 1;
+}
+
+.actionCardBody{
+    font-family: 'Roboto', sans-serif;
+}
+
+.actionCardImg{
+    width: 80%;
+    margin: 0 auto;
+    /* margin-bottom: 20px; */
+}
+
+.actionCardImg > img {
+    width: 100%;
+    /* height: inherit; */
+}
+
+.actionCardTitle {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 800;
+    font-style: normal;
+    letter-spacing: 0.1em;
+    margin: 15px 0;
+}
+
+.actionCardBtn {
+    width: 50%;
+    margin-top: 30px;
+    margin-bottom: 5px;
+    background-color: beige;
+    color: rgb(10, 10, 10);
+    padding: 10px;
+    text-align: center;
+    border-radius: 50px;
+    font-family: 'Roboto', sans-serif;
+
+    
+}
+.actionCardBtn:hover {
+    cursor: pointer;
+}
+
+.loginNoteContainer{
+    text-align: center;
+}
+
+.loginIdentifier {
+    font-weight: bold;
+}
+.loginIdentifier > span {
+    font-style: italic;
+}
+
+@media only screen and (max-width: 800px) {
+    .chatProfilePanel{
+        width: 40%;
+    }
+}

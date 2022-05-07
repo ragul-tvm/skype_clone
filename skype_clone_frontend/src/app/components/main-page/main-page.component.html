@@ -1,0 +1,108 @@
+
+<div class="mainProfile" *ngIf="user">
+    <div class="main dflex-row">
+        <div class="chatProfilePanel dflex-col">
+            <div class="profileContainer dflex-row">
+                <div class="personalProfilePhoto">
+                    <img [src]="user.profileImage" alt="dp" id="profilePhotoMain" width="50">
+                </div>
+                <div class="personalProfileNameAndStatus dflex-col">
+                    <div class="personalProfileNameWithCost">
+                        <div class="personalProfileName" id="profileName">{{user.firstName}} {{user.lastName}}</div>
+                        <div class="personalProfileCost">$&nbsp;3.28</div>
+                    </div>
+                    <div class="personalProfileStatus">{{user.status}}</div>
+                </div>
+                <div class="personalProfileSettings">
+                    <i class="far fa-ellipsis-h"></i>
+                </div>
+            </div>
+            <div class="searchControlPanel">
+                <div class="searchInputSection">
+                    <div class="searchInputToggler">
+                        <i class="far fa-search"></i>&nbsp;&nbsp;People,&nbsp;groups,&nbsp;messages
+                    </div>
+                    <div class="searchInputDialer">
+                        .&nbsp;.&nbsp;.<br>
+                        .&nbsp;.&nbsp;.<br>
+                        .&nbsp;.&nbsp;.<br>
+                        &nbsp;&nbsp;.&nbsp;&nbsp;
+                    </div>
+                </div>
+                <div class="searchIconSection dflex-row">
+                    <div class="icon dflex-col">
+                        <i class="fal fa-comment-lines"></i>
+                        <span>Chats</span>
+                    </div>
+                    <div class="icon dflex-col">
+                        <i class="fal fa-phone"></i>
+                        <span>Calls</span>
+                    </div>
+                    <div class="icon dflex-col">
+                        <i class="far fa-address-book"></i>
+                        <span>Contacts</span>
+                    </div>
+                    <div class="icon dflex-col">
+                        <i class="fal fa-bell"></i>
+                        <span>Notification</span>
+                    </div>
+                </div>
+                <div class="searchAdvancePanel">
+                    <div class="skypeMeet"><i class="fat fa-video-camera"></i>&nbsp;Meet&nbsp;Now&nbsp;<i class="fat fa-chevron-down"></i></div>
+                    <div class="skypeMeet"><i class="fat fa-edit"></i>&nbsp;New&nbsp;Chat&nbsp;<i class="fat fa-chevron-down"></i></div>
+                </div>
+            </div>
+            <div class="chatListPanelTitle">Recent Chats&nbsp;<i class="fat fa-chevron-down"></i></div>
+            <div class="chatListPanel dflex-col">
+                <div class="chatsListControlPanel">
+                    <ul id="chatsListControlPanel">
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="chatControlPanel">
+            <div class="welcomeScreen dflex-col" id="welcomeScreen">
+                <div class="WelcomeNotewithProfilePicture dflex-row">
+                    <img [src]="user.profileImage" alt="dp">
+                    <div class="welcomeNoteWithName">
+                        <div class="welcomeNote">Welcome&nbsp;,</div>
+                        <div class="profileNameOnWelcomeNote">{{user.firstName}} {{user.lastName}}</div>
+                    </div>
+                    
+                    <div class="shareProfile"><span>Share&nbsp;Profile</span></div>
+                </div>
+                <div class="actionCardOnWelcomeScreen dflex-col">
+                    <div class="actionCardTitleNote">Here are some quick action to get you started</div>
+                    <div class="actionCardContainer dflex-row">
+                        <div class="actionCard dflex-col">
+                            <div class="actionCardImg"><img src="../../../assets/meet-image.png" alt=""></div>
+                            <div class="actionCardTitle">Easy meetings with anyone</div>
+                            <div class="actionCardBody">
+                                Share the invite with anyone even if they aren't on Skype. No sign ups or downloads required.
+                            </div>
+                            <div class="actionCardBtn">
+                                <i class="fal fa-video-camera"></i>&nbsp;&nbsp;Meet&nbsp;Now&nbsp;&nbsp;<i class="fat fa-chevron-down"></i>
+                            </div>
+                        </div>
+                        <div class="actionCard dflex-col">
+                            <div class="actionCardImg"><img src="../../../assets/dialpad-image.png" alt=""></div>
+                            <div class="actionCardTitle">Call mobiles and landlines</div>
+                            <div class="actionCardBody">
+                                Skype to Skype calls are always free, but you can also call mobiles and landlines from Skype at great low rates. 
+                            </div>
+                            <div class="actionCardBtn">
+                                Open dial pad
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="loginNoteContainer">
+                    <div class="loginIdentifier">You are signed in as <span id="loginEmail">{{user.emailId}}</span></div>
+                    <div>Try <a href="">switching accounts</a> if you cannot see your contacts or conversation history.</div>
+                    <div><a href="/learn">Learn more</a></div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
